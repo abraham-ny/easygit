@@ -6,9 +6,9 @@ Python CLI to make it easier to work with Git
 
 ## Features
 
-- Keyboard navigation with arrow keys (left, right)
-- Auto push into your local files into your github repository
-- Ready template for your cloned repository
+- Keyboard navigation with arrow keys (left, right).
+- Automatically push your local files into your GitHub repository.
+- Ready template for your cloned repository :
    - README.md
    - CONTRIBUTING.md
    - .gitignore
