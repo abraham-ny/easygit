@@ -1,4 +1,4 @@
-# Easygit
+# Easy Git
 
 Python CLI to make it easier to work with Git
 
