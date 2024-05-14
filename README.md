@@ -38,7 +38,7 @@ Python CLI tool that simplifies Git tasks, making it easier to manage your Githu
 
 1. **Executable File:**
 
-   - Copy the `main.exe` file and paste it into your main directory.
+   - Copy the `easygit.exe` file and paste it into your main directory.
 
 2. **Keyboard Control:**
 
