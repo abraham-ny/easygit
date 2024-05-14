@@ -1,6 +1,6 @@
 # EasyGit
 
-Python CLI to make it easier to work with Git
+Python CLI tool that simplifies Git tasks, making it easier to manage your Github repositories.
 
 ![](example.png)
 
