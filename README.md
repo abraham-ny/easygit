@@ -8,7 +8,7 @@ Python CLI to make it easier to work with Git
 
 - Keyboard navigation with arrow keys (left, right).
 - Automatically push your local files into your GitHub repository.
-- Ready template for your cloned repository :
+- Ready and automatically set up templates for your cloned repository :
    - README.md
    - CONTRIBUTING.md
    - .gitignore
