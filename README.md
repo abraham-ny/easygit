@@ -6,13 +6,13 @@ Python CLI tool that simplifies Git tasks, making it easier to manage your Githu
 
 ## Features
 
-- Keyboard navigation with arrow keys (left, right).
-- Automatically push your local files into your GitHub repository.
-- Ready and automatically set up templates for your cloned repository :
-   - README.md
-   - CONTRIBUTING.md
-   - .gitignore
-   - .vscode (for disable git in vscode)
+- **Keyboard Navigation:** Navigate easily using arrow keys (left, right).
+- **Automatic Push:** Automatically push your local files to your GitHub repository.
+- **Ready-to-Use Templates:** Cloned repositories come with pre-set templates:
+  - README.md
+  - CONTRIBUTING.md
+  - .gitignore
+  - .vscode (to disable Git in VSCode)
 
 ## Installation
 
@@ -28,7 +28,7 @@ Python CLI tool that simplifies Git tasks, making it easier to manage your Githu
    cd easygit
    ```
 
-3. Build .exe file
+3. Build the .exe file:
 
    ```shell
    pyinstaller --onefile main.py
@@ -36,15 +36,17 @@ Python CLI tool that simplifies Git tasks, making it easier to manage your Githu
 
 ## How to Use:
 
-### 1. Use the executable file 
+1. **Executable File:**
 
-Copy the `main.exe` file and paste it into your main directory.
+   - Copy the `main.exe` file and paste it into your main directory.
 
-### 2. Keyboard control
+2. **Keyboard Control:**
 
-Use `space` key to update and `arrow` keys (left, right) to move between folders
+   - Press the space key to update.
+   - Utilize the arrow keys (left, right) to navigate between folders.
 
-### 3. Maximize Your Productivity
+3. **Boost Your Productivity:**
+   - Maximize your efficiency with this tool.
 
 ## Getting Help
 
@@ -52,7 +54,7 @@ If you have any questions or need assistance, feel free to [open an issue](https
 
 ## Contributing
 
-If you have an idea for a new prompt or want to improve existing ones, check out [contributing.md](CONTRIBUTING.md) for more information.
+If you have an idea for a new feature or want to improve existing ones, check out [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
 
 ## Support
 
