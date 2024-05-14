@@ -1,6 +1,6 @@
 # Easygit
 
-This repository helps you ..
+Python CLI to make it easier to work with Git
 
 ![](example.gif)
 
