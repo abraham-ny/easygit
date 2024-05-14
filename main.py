@@ -1,6 +1,7 @@
-import os, time
+import os, time, msvcrt
 import validators
-from git import Git
+from app.explorer import Explorer
+from app.git import Git
 
 def main(text=""):
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -17,26 +18,30 @@ def main(text=""):
     print()
 
 if __name__ == "__main__":
-    
     main()
     while True:
+        choice = msvcrt.getch()
 
-        choice = input("Enter your choice: ")
-
-        if choice == "1":
+        if choice == b'1':
             url = input("Enter remote repository URL : ")
             if not validators.url(url):
                 main("Invalid URL")
             else:
                 Git.clone(url)
-        elif choice == "2":
+        elif choice == b'2':
             Git.pull()
-        elif choice == "3":
+        elif choice == b'3':
             text = input("Enter your commit : ")
             if not text:
                 text = "Automated commit"
             Git.run(text)
-        elif choice == "0":
+
+        elif choice == b'M':  # Right arrow key
+            Explorer.next()
+        elif choice == b'K':  # Left arrow key
+            Explorer.back()
+
+        elif choice == b'0':
             print("Exiting...")
             os.system('cls' if os.name == 'nt' else 'clear')
             break

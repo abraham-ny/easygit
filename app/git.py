@@ -1,48 +1,16 @@
 import os
 import subprocess
-
+from app.halper import Halper
+from app.create import Create
 class Git:
 
-    def create_gitignore_file():
-        gitignore_content = """# Ignore IDE directories
-/.idea/
-/.vscode/
-
-# Ignore Python bytecode files
-__pycache__/
-
-# Ignore executable files
-*.exe
-    """
-        with open(".gitignore", "w") as file:
-            file.write(gitignore_content)
-
-    def create_readme(name):
-
-        name = Git.capitalize_words(name)
-
-        content = f"""# {name}
-
-## description
-
-## Getting Help
-
-If you have any questions or need assistance, feel free to [open an issue](https://github.com/pycorer/easypush/issues).
-
-## Support
-
-If you find this project helpful, show your support by starring the repository."""
-
-        # Write content to README.md file
-        with open("README.md", "w") as file:
-            file.write(content)
-
-    def after_clone(name):
-        Git.create_readme(name)
-        Git.create_gitignore_file()
-
-
-
+    def after_clone(url):
+        Create.gitignore()
+        Create.readme(url)
+        Create.contribution()
+        Create.license()
+        Create.vscode()
+        
     def clone(url):
         from main import main
         try:
@@ -51,7 +19,7 @@ If you find this project helpful, show your support by starring the repository."
 
             name = url.split("/")[-1]
             os.chdir(name)  # Change directory to the cloned repository
-            Git.after_clone(name)
+            Git.after_clone(url)
             return main(f"{url} Successfully cloned.")
         except subprocess.CalledProcessError as e:
             print(f"An error occurred during cloning: {e}")
@@ -108,18 +76,6 @@ If you find this project helpful, show your support by starring the repository."
 
         return main("Successfully added, committed, and pushed changes.")
 
-    def capitalize_words(sentence):
-        # Split the sentence into words
-        words = sentence.split()
-        
-        # Capitalize the first letter of each word
-        capitalized_words = [word.capitalize() for word in words]
-        
-        # Join the capitalized words back into a sentence
-        capitalized_sentence = ' '.join(capitalized_words)
-        
-        return capitalized_sentence
-
     def info():
 
         # Get the current directory path
@@ -128,10 +84,10 @@ If you find this project helpful, show your support by starring the repository."
         # Get the current folder name
         directory_name = os.path.basename(directory_path)
 
-        directory_name = Git.capitalize_words(directory_name)
+        directory_name = Halper.capitalize_words(directory_name)
 
         # Print the current folder name
-        print("Project : ", directory_name)
+        print("Folder  : ", directory_name)
 
         # Print the current directory path
         print("Path    : ", directory_path)
