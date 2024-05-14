@@ -44,7 +44,9 @@ __pycache__/
 /dist/
 /build/
 
-# Ignore another files
+# Ignore another folders & files
+/my_data/
+/mydata/
 *.exe
 test.py
 test2.py"""

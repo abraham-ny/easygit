@@ -31,7 +31,7 @@ Python CLI tool that simplifies Git tasks, making it easier to manage your Githu
 3. Build the .exe file:
 
    ```shell
-   pyinstaller --onefile --icon=icon.ico --name=EasyGit main.py
+   pyinstaller --onefile --icon=icon.ico --name=easygit main.py
    ```
 
 ## How to Use:

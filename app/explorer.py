@@ -60,25 +60,29 @@ class Explorer:
         Returns:
             None
         """
+        from main import main
         os.system('cls' if os.name == 'nt' else 'clear')
+        print("Select folder :")
+        print()
         folders = Explorer.display_folders()
         print()
         if len(folders) == 1:  # If there's only one folder, change to it directly
             Explorer.change_directory("1", folders)
+        elif len(folders) == 0:
+            main("There is no folder")
         else:
             print("Enter the folder number or press '0' to return to main:")
             selected_folder = None
             while True:
                 char = msvcrt.getch()
-                if char == b'0':  # Left arrow key
-                    from main import main
+                if char == b'K':  # Left arrow key
                     main()
                     break
                 elif char.isdigit():
                     selected_folder = char.decode('utf-8')
                     break
                 else:
-                    print("Invalid input. Please enter a number or '0'.")
+                    print("Invalid input. Please enter a numbe.")
             
             if selected_folder is not None:
                 Explorer.change_directory(selected_folder, folders)
