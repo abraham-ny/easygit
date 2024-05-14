@@ -1,6 +1,6 @@
-# Easy Push
+# Easy Git
 
-Simple python CLI easy git push
+Python CLI to make it easier to work with Git
 
 ![](example.gif)
 
