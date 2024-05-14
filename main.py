@@ -32,20 +32,13 @@ if __name__ == "__main__":
             Git.pull()
         elif choice == b'3':
             print("Enter your commit (press Enter to confirm):")
-            char = msvcrt.getch()
-            text = ''
-            while True:
-                if char == b'\r':  # Enter key
-                    break
-                text += char.decode('utf-8')
-                break
-            if text.strip() == '0':
+            text = input().strip()
+            if text == '0':
                 main()
                 continue
-            elif text.strip() == "":
-                print("3" + text)
+            elif text == "":
                 text = "Automated commit"
-            Git.run(text.strip())
+            Git.run(text)
 
         elif choice == b' ':  # Space key
             main()

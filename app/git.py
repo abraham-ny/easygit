@@ -48,6 +48,7 @@ class Git:
             return False
 
     def commit(text):
+        text = Halper.capitalize_first_letter(text)
         try:
             # Commit changes
             subprocess.run(["git", "commit", "-m", text], check=True)
