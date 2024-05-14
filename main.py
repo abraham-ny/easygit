@@ -43,7 +43,7 @@ if __name__ == "__main__":
                 main()
                 continue
             elif text == "":
-                text = "Automated commit"
+                text = "Automated commit with EasyGit"
             Git.run(text)
 
         elif choice == b' ':  # Space key
