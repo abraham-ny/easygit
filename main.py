@@ -25,7 +25,7 @@ if __name__ == "__main__":
         if choice == b'1':
             url = input("Enter remote repository URL : ")
             if not validators.url(url):
-                main("Invalid URL")
+                main("Invalid remote repository URL")
             else:
                 Git.clone(url)
         elif choice == b'2':
