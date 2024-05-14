@@ -115,7 +115,7 @@ If you have any questions or need assistance, feel free to [open an issue](https
 
 ## Contributing
 
-If you have an idea for a new prompt or want to improve existing ones, check out [contributing.md](CONTRIBUTING.md) for more information.
+If you have an idea for a new feature or want to improve existing ones, check out [contributing.md](CONTRIBUTING.md) for more information.
 
 ## Support
 
