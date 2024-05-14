@@ -1,0 +1,12 @@
+# Ignore IDE directories
+/.idea/
+/.vscode/
+
+# Ignore Python bytecode files
+__pycache__/
+
+# Ignore executable files
+*.exe
+
+# Ignore other files
+.spec
