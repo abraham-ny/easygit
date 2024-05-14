@@ -1,6 +1,6 @@
 # Contribution Guidelines
 
-Before contributing to this repository, please ensure you are adhering to the following general guidelines. Further, if you are submitting a new prompt to the repository, be sure you are also following the prompt-specific guidelines. These checks will ensure that your contributions can be easily integrated into the main repository, without any headache for the owners.
+Before contributing to this repository, please ensure you adhere to the following general guidelines. Additionally, if you are submitting a new feature, make sure to follow the feature-specific guidelines as well. These checks will ensure that your contributions can be easily integrated into the main repository, minimizing any potential headaches for the owners.
 
 ## General Guidelines
 
