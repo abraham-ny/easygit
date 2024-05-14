@@ -1,6 +1,6 @@
 import os, time, msvcrt
 import validators
-from app.explorer import Explorer
+
 from app.git import Git
 
 def main(text="Welcome to your EasyGit"):
@@ -24,6 +24,7 @@ def main(text="Welcome to your EasyGit"):
     print()
 
 if __name__ == "__main__":
+    from app.explorer import Explorer
     main()
     while True:
         choice = msvcrt.getch()

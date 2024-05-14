@@ -1,4 +1,5 @@
-import os, msvcrt
+import os
+import msvcrt
 
 class Explorer:
     """
@@ -7,12 +8,13 @@ class Explorer:
 
     def display_folders():
         """
-        Display the list of folders in the current directory.
+        Display the list of folders in the current directory, ignoring folders
+        that begin with '.'.
 
         Returns:
             list: A list of folder names.
         """
-        folders = [folder for folder in os.listdir() if os.path.isdir(folder)]
+        folders = [folder for folder in os.listdir() if os.path.isdir(folder) and not folder.startswith('.')]
         for i, folder in enumerate(folders, 1):
             print(f"[{i}] {folder}")
         return folders
@@ -82,7 +84,7 @@ class Explorer:
                     selected_folder = char.decode('utf-8')
                     break
                 else:
-                    print("Invalid input. Please enter a numbe.")
+                    print("Invalid input. Please enter a number.")
             
             if selected_folder is not None:
                 Explorer.change_directory(selected_folder, folders)
