@@ -218,7 +218,7 @@ This repository helps you ..
 3. Run `main.py`
 
    ```shell
-   cd main.py
+   python main.py
    ```
 
 ## How to Use:

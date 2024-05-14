@@ -6,9 +6,13 @@ Python CLI to make it easier to work with Git
 
 ## Features
 
-- Feature 1
-- Feature 2
-- Feature 3
+- Keyboard navigation with arrow keys (left, right)
+- Auto push into your local files into your github repository
+- Ready template for your cloned repository
+   - README.md
+   - CONTRIBUTING.md
+   - .gitignore
+   - .vscode (for disable git in vscode)
 
 ## Installation
 
@@ -24,23 +28,19 @@ Python CLI to make it easier to work with Git
    cd easygit
    ```
 
-3. Run `main.py`
+3. Build .exe file
 
    ```shell
-   cd main.py
+   pyinstaller --onefile main.py
    ```
 
 ## How to Use:
 
-### 1. First instruction
+### 1. Use the executable file 
 
-Lorem Ipsum is simply **dummy** text of the printing and typesetting industry.
+Copy the `main.exe` file and paste it into your main directory.
 
-### 2. Second instruction
-
-It is a long established fact that a reader will be distracted. [Here's a simple explanation](https://www.youtube.com).
-
-### 3. Maximize Your Productivity
+### 2. Maximize Your Productivity
 
 ## Getting Help
 
@@ -53,8 +53,3 @@ If you have an idea for a new prompt or want to improve existing ones, check out
 ## Support
 
 If you find this project helpful, show your support by starring the repository.
-
-## Sources
-
-- [source_name](source_url).
-- [source_name](source_url).
