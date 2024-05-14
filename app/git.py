@@ -91,5 +91,3 @@ class Git:
 
         # Print the current directory path
         print("Path    : ", directory_path)
-
-        print()

@@ -1,8 +1,8 @@
-# Easy Git
+# EasyGit
 
 Python CLI to make it easier to work with Git
 
-![](example.gif)
+![](example.png)
 
 ## Features
 
