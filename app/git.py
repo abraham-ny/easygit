@@ -2,9 +2,19 @@ import os
 import subprocess
 from app.halper import Halper
 from app.create import Create
+
 class Git:
+    """
+    A class for Git operations.
+    """
 
     def after_clone(url):
+        """
+        Perform actions after cloning a repository.
+
+        Args:
+            url (str): The URL of the repository.
+        """
         Create.gitignore()
         Create.readme(url)
         Create.contribution()
@@ -12,6 +22,15 @@ class Git:
         Create.vscode()
         
     def clone(url):
+        """
+        Clone a Git repository.
+
+        Args:
+            url (str): The URL of the repository.
+
+        Returns:
+            str: A message indicating the success or failure of the cloning process.
+        """
         from main import main
         try:
             # Add all files to git
@@ -29,6 +48,9 @@ class Git:
             return main(f"Failed to change directory to {name}")
 
     def pull():
+        """
+        Pull changes from the remote repository.
+        """
         from main import main
         try:
             # Add all files to git
@@ -39,6 +61,12 @@ class Git:
             return main(f"'git pull' failed")
 
     def add():
+        """
+        Add all files to the staging area.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+        """
         try:
             # Add all files to git
             subprocess.run(["git", "add", "."], check=True)
@@ -48,6 +76,15 @@ class Git:
             return False
 
     def commit(text):
+        """
+        Commit changes with a specified message.
+
+        Args:
+            text (str): The commit message.
+
+        Returns:
+            bool: True if successful, False otherwise.
+        """
         text = Halper.capitalize_first_letter(text)
         try:
             # Commit changes
@@ -58,6 +95,12 @@ class Git:
             return False
 
     def push():
+        """
+        Push committed changes to the remote repository.
+        
+        Returns:
+            bool: True if successful, False otherwise.
+        """
         try:
             # Push changes to remote
             subprocess.run(["git", "push"], check=True)
@@ -67,6 +110,15 @@ class Git:
             return False
 
     def run(text):
+        """
+        Perform Git add, commit, and push operations in sequence.
+
+        Args:
+            text (str): The commit message.
+
+        Returns:
+            str: A message indicating the success or failure of the operations.
+        """
         from main import main
         if Git.add() is False:
             return main("'git add .' failed")
@@ -78,7 +130,9 @@ class Git:
         return main("Successfully added, committed, and pushed changes.")
 
     def info():
-
+        """
+        Display information about the current Git repository.
+        """
         # Get the current directory path
         directory_path = os.getcwd()
 

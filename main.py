@@ -4,6 +4,12 @@ from app.explorer import Explorer
 from app.git import Git
 
 def main(text="Welcome to your EasyGit"):
+    """
+    Main function to display menu options and execute corresponding actions.
+
+    Args:
+        text (str, optional): Additional text to display. Defaults to "Welcome to your EasyGit".
+    """
     os.system('cls' if os.name == 'nt' else 'clear')
     print()
     Git.info()
