@@ -40,7 +40,11 @@ Python CLI to make it easier to work with Git
 
 Copy the `main.exe` file and paste it into your main directory.
 
-### 2. Maximize Your Productivity
+### 2. Keyboard control
+
+Use `space` key to update and `arrow` keys (left, right) to move between folders
+
+### 3. Maximize Your Productivity
 
 ## Getting Help
 
