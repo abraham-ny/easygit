@@ -69,7 +69,7 @@ test2.py"""
 
 This repository helps you ..
 
-![](example.gif)
+![](image.gif)
 
 ## Features
 
