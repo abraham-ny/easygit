@@ -1,4 +1,4 @@
-import os
+import os, msvcrt
 class Explorer:
 
     def display_folders():
@@ -34,6 +34,19 @@ class Explorer:
         if len(folders) == 1:  # If there's only one folder, change to it directly
             Explorer.change_directory("1", folders)
         else:
-            selected_folder = input("Enter the folder number: ")
-            # Change directory based on user input
-            Explorer.change_directory(selected_folder, folders)
+            print("Enter the folder number or press 'K' to return to main:")
+            selected_folder = None
+            while True:
+                char = msvcrt.getch()
+                if char == b'K':  # Left arrow key
+                    from main import main
+                    main()
+                    break
+                elif char.isdigit():
+                    selected_folder = char.decode('utf-8')
+                    break
+                else:
+                    print("Invalid input. Please enter a number or 'K'.")
+            
+            if selected_folder is not None:
+                Explorer.change_directory(selected_folder, folders)
