@@ -31,7 +31,9 @@ class Explorer:
         os.system('cls' if os.name == 'nt' else 'clear')
         folders = Explorer.display_folders()
         print()
-        selected_folder = input("Enter the folder number  : ")
-
-        # Change directory based on user input
-        Explorer.change_directory(selected_folder, folders)
+        if len(folders) == 1:  # If there's only one folder, change to it directly
+            Explorer.change_directory("1", folders)
+        else:
+            selected_folder = input("Enter the folder number: ")
+            # Change directory based on user input
+            Explorer.change_directory(selected_folder, folders)
