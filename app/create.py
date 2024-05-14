@@ -162,7 +162,7 @@ The following guidelines should be followed when making any open-source contribu
 ####################################################################################################
 
     def license():
-        gitignore_content = """Copyright (c) 2012-2024 Scott Chacon and others
+        gitignore_content = """Copyright (c) 2024 Mohammed Dellihr and others
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

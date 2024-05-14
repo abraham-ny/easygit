@@ -10,6 +10,7 @@ Python CLI tool that simplifies Git tasks, making it easier to manage your Githu
 - **Automatic Push :** Automatically push your local files to your GitHub repository.
 - **Ready-to-Use Templates :** Cloned repositories come with pre-set templates:
   - README.md
+  - LICENSE (default : MIT)
   - CONTRIBUTING.md
   - .gitignore
   - .vscode (to disable Git in VSCode)
