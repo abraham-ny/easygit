@@ -88,3 +88,16 @@ class Explorer:
             
             if selected_folder is not None:
                 Explorer.change_directory(selected_folder, folders)
+
+    def vscode():
+        import subprocess, os
+        from main import main
+        try:
+            # Open Visual Studio Code without displaying stdout/stderr messages
+            with open(os.devnull, 'w') as devnull:
+                subprocess.Popen(["C:\\Users\\lProfesseur\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe", "."], stdout=devnull, stderr=devnull)
+                os.system('cls' if os.name == 'nt' else 'clear')  # Clears the terminal screen
+            return main(f"VSCode opened.")
+        except Exception as e:
+            print(f"An error occurred: {e}")
+            return main(f"VSCode opening failed: {e}")

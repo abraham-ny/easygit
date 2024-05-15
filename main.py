@@ -1,6 +1,6 @@
-import os, time, msvcrt
+import os, time, msvcrt, sys
 import validators
-
+import keyboard
 from app.git import Git
 
 def main(text="Welcome to your EasyGit"):
@@ -46,7 +46,9 @@ if __name__ == "__main__":
             elif text == "":
                 text = "Automated EasyGit commit"
             Git.run(text)
-
+        elif keyboard.is_pressed('enter'):
+            Explorer.vscode()
+            pass
         elif choice == b' ':  # Space key
             main()
         elif choice == b'M':  # Right arrow key
