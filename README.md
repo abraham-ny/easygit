@@ -62,6 +62,11 @@ If you have any questions or need assistance, feel free to [open an issue](https
 
 If you have an idea for a new feature or want to improve existing ones, check out [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
 
+## Roadmap
+- [x] Basic Functionalities.
+- [ ] Configure virtual environments for VSCode path.
+- [ ] Integrate additional Git commands.
+
 ## Support
 
 If you find this project helpful, show your support by starring the repository.
