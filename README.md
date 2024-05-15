@@ -35,7 +35,7 @@ Python CLI tool that simplifies Git tasks, making it easier to manage your Githu
    pip install -r requirements.txt
    ```
 
-4. Build the .exe file:
+4. Build the executable file:
 
    ```shell
    pyinstaller --onefile --icon=icon.ico --name=easygit main.py
