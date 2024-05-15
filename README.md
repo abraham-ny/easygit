@@ -41,7 +41,7 @@ Python CLI tool that simplifies Git tasks, making it easier to manage your Githu
    - Copy the `easygit.exe` file and paste it into your main directory.
 
 2. **Keyboard Control:**
-   - Press enter to open the current folder in VSCode
+   - Press the enter key to open the current folder in VSCode
    - Press the space key to update.
    - Utilize the arrow keys (left, right) to navigate between folders.
 
