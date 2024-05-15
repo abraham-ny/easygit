@@ -29,7 +29,13 @@ Python CLI tool that simplifies Git tasks, making it easier to manage your Githu
    cd easygit
    ```
 
-3. Build the .exe file:
+3. Install project dependencies:
+
+   ```shell
+   pip install -r requirements.txt
+   ```
+
+4. Build the .exe file:
 
    ```shell
    pyinstaller --onefile --icon=icon.ico --name=easygit main.py

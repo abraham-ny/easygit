@@ -92,8 +92,13 @@ This repository helps you ..
    ```shell
    cd {repository}
    ```
+3. Install project dependencies:
 
-3. Run `main.py`
+   ```shell
+   pip install -r requirements.txt
+   ```
+
+4. Run `main.py`
 
    ```shell
    python main.py
