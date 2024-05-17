@@ -17,9 +17,9 @@ def main(text="Welcome to your EasyGit"):
     if text != "":
         print(text)
         print()
-    print("[1] Git clone")
-    print("[2] Git pull")
-    print("[3] Git push")
+    print("[1] Clone")
+    print("[2] Pull")
+    print("[3] Push")
     print("[0] Exit")
     print()
 
