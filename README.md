@@ -6,8 +6,9 @@ Python CLI tool that simplifies Git tasks, making it easier to manage your Githu
 
 ## Features
 
-- **Keyboard Navigation :** Navigate easily using arrow keys (left, right).
-- **Automatic Push :** Automatically push your local files to your GitHub repository.
+- **Keyboard Navigation :** Navigate easily between folders using the arrow keys.
+- **One-Press VSCode :** Open VSCode in the current folder by pressing the Enter key.
+- **Easy Push :** Easily push your local files to your GitHub repository.
 - **Ready-to-Use Templates :** Cloned repositories come with pre-set templates:
   - README.md
   - LICENSE (default : MIT)
