@@ -34,8 +34,13 @@ Python CLI tool that simplifies Git tasks, making it easier to manage your Githu
    ```shell
    pip install -r requirements.txt
    ```
+4. Update line 98 of `app/explorer.py` with your VS Code path.
 
-4. Build the executable file:
+   ```python
+   subprocess.Popen(["C:\\Users\\lProfesseur\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe", "."], stdout=devnull, stderr=devnull)
+   ```
+
+5. Build the executable file:
 
    ```shell
    pyinstaller --onefile --icon=icon.ico --name=easygit main.py

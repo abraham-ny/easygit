@@ -3,7 +3,6 @@ import validators
 import keyboard
 from app.git import Git
 
-
 def main(text="Welcome to your EasyGit"):
     """
     Main function to display menu options and execute corresponding actions.
