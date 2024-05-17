@@ -2,7 +2,7 @@
 
 Python CLI tool that simplifies Git tasks, making it easier to manage your Github repositories.
 
-![](image.png)
+![](example.png)
 
 ## Features
 
