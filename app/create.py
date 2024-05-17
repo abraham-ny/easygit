@@ -50,8 +50,10 @@ __pycache__/
 *.exe
 test.py
 test2.py"""
-        with open(".gitignore", "w") as file:
-            file.write(gitignore_content)
+        file_path = ".gitignore"
+        if not os.path.exists(file_path):
+            with open(file_path, "w") as file:
+                file.write(gitignore_content)
 
 ####################################################################################################
 ####################################################################################################
@@ -141,9 +143,10 @@ If you find this project helpful, show your support by starring the repository.
 - [source_name](source_url).
 - [source_name](source_url)."""
 
-        # Write content to README.md file
-        with open("README.md", "w") as file:
-            file.write(content)
+        file_path = "README.md"
+        if not os.path.exists(file_path):
+            with open(file_path, "w") as file:
+                file.write(content)
 
 ####################################################################################################
 ####################################################################################################
@@ -166,8 +169,10 @@ The following guidelines should be followed when making any open-source contribu
 - [ ] Be sure changes are compatible with the repository's license.
 - [ ] In case of conflicts, provide helpful explanations regarding your proposed changes so that they can be approved by repo owners."""
 
-        with open("CONTRIBUTING.md", "w") as file:
-            file.write(gitignore_content)
+        file_path = "CONTRIBUTING.md"
+        if not os.path.exists(file_path):
+            with open(file_path, "w") as file:
+                file.write(gitignore_content)
 
 ####################################################################################################
 ####################################################################################################
@@ -196,5 +201,7 @@ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."""
 
-        with open("LICENSE", "w") as file:
-            file.write(gitignore_content)
+        file_path = "LICENSE"
+        if not os.path.exists(file_path):
+            with open(file_path, "w") as file:
+                file.write(gitignore_content)
