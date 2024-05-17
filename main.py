@@ -43,8 +43,10 @@ if __name__ == "__main__":
             if text == '0':
                 main()
                 continue
-            elif text == "":
-                text = "Automated EasyGit commit"
+            elif text == "" or text is None:
+                text = "Automated easygit commit"
+            else:
+                text = text + " - easygit"
             Git.run(text)
         elif keyboard.is_pressed('enter'):
             Explorer.vscode()
