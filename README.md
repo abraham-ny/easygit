@@ -64,6 +64,7 @@ If you have an idea for a new feature or want to improve existing ones, check ou
 
 ## Roadmap
 - [x] Basic Functionalities.
+- [ ] Correct templates adding for ".git" repository URL clone.
 - [ ] Configure virtual environments for VSCode path.
 - [ ] Integrate additional Git commands.
 
