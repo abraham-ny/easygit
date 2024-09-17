@@ -40,6 +40,9 @@ class Create:
 # Ignore Python bytecode files
 __pycache__/
 
+# Ignore environment folder for pycharm
+/venv/
+
 # Building
 /dist/
 /build/
@@ -86,7 +89,7 @@ This repository helps you ..
 1. Clone the repository or download it:
 
    ```shell
-   git clone https://github.com/{organization}/{repository}
+   git clone https://github.com/{organization}/{repository}.git
    ```
 
 2. Navigate to the project directory:
