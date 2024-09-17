@@ -20,6 +20,7 @@ def main(text="Welcome to your EasyGit"):
     print("[1] Clone")
     print("[2] Pull")
     print("[3] Push")
+    print("[4] Add And Commit")
     print("[0] Exit")
     print()
 
@@ -48,6 +49,14 @@ if __name__ == "__main__":
             else:
                 text = text + " - easygit"
             Git.run(text)
+        elif choice == b'4':
+            # print("Similar to git commit -am")
+            msg = input("Enter commit message: ")
+            if msg == "" or msg is None:
+                print("Message cannot be empty")
+            else:
+                Git.addcommit(msg)
+
         elif keyboard.is_pressed('enter'):
             Explorer.vscode()
             pass
@@ -63,4 +72,4 @@ if __name__ == "__main__":
             os.system('cls' if os.name == 'nt' else 'clear')
             break
         else:
-            print("Invalid choice. Please choose again.")
+            print("Invalid choice. Please try again.")
