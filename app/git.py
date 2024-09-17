@@ -75,6 +75,21 @@ class Git:
             print(f"An error occurred: {e}")
             return False
 
+    def addfile(text):
+        """
+                Add a specified to the staging area.
+
+                Returns:
+                    bool: True if successful, False otherwise.
+        """
+        try:
+            # Add all files to git
+            subprocess.run(["git", "add", text], check=True)
+            return True
+        except subprocess.CalledProcessError as e:
+            print(f"An error occurred: {e}")
+            return False
+
     def commit(text):
         """
         Commit changes with a specified message.

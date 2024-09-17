@@ -1,5 +1,7 @@
 import os
 import msvcrt
+import winreg
+
 
 class Explorer:
     """
@@ -89,15 +91,42 @@ class Explorer:
             if selected_folder is not None:
                 Explorer.change_directory(selected_folder, folders)
 
+    def find_vscode():
+        # Check common install paths to find where vsc is installed
+        possible_paths = [
+            os.path.join(os.getenv('LOCALAPPDATA'), 'Programs', 'Microsoft VS Code', 'Code.exe'),  # User Installer
+            os.path.join(os.getenv('ProgramFiles'), 'Microsoft VS Code', 'Code.exe'),  # System Installer
+            os.path.join(os.getenv('ProgramFiles(x86)'), 'Microsoft VS Code', 'Code.exe'),  # 32-bit System Installer
+        ]
+
+        for path in possible_paths:
+            if os.path.exists(path):
+                return path
+
+        # If not found, check registry
+        try:
+            key = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE,
+                                 r"SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\Code.exe")
+            vscode_path, _ = winreg.QueryValueEx(key, "")
+            return vscode_path
+        except FileNotFoundError:
+            return None
+
     def vscode():
         import subprocess, os
         from main import main
         try:
             # Open Visual Studio Code without displaying stdout/stderr messages
+            # Fixed vsc path to be users path instead of C:\\Users\\lProfesseur
             with open(os.devnull, 'w') as devnull:
-                subprocess.Popen(["C:\\Users\\lProfesseur\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe", "."], stdout=devnull, stderr=devnull)
+                vscode_path = find_vscode()
+                if vscode_path:
+                    print(f"Visual Studio Code executable found at: {vscode_path}")
+                    subprocess.Popen([vscode_path, "."],stdout=devnull, stderr=devnull)
+                else:
+                    print("Visual Studio Code executable not found.")
                 os.system('cls' if os.name == 'nt' else 'clear')  # Clears the terminal screen
             return main(f"VSCode opened.")
         except Exception as e:
             print(f"An error occurred: {e}")
-            return main(f"VSCode opening failed: {e}")
+            return main(f"Failed to open Visual Studio Code: {e}")
