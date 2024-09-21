@@ -75,6 +75,21 @@ class Git:
             print(f"An error occurred: {e}")
             return False
 
+    def addfile(text):
+        """
+                Add a specified to the staging area.
+
+                Returns:
+                    bool: True if successful, False otherwise.
+        """
+        try:
+            # Add all files to git
+            subprocess.run(["git", "add", text], check=True)
+            return True
+        except subprocess.CalledProcessError as e:
+            print(f"An error occurred: {e}")
+            return False
+
     def commit(text):
         """
         Commit changes with a specified message.
@@ -92,6 +107,25 @@ class Git:
             return True
         except subprocess.CalledProcessError as e:
             print(f"An error occurred: {e}")
+            return False
+
+    def addcommit(text):
+        """
+        The git commit -am function that adds files and commits, eliminating the need for git add then git commit.
+
+        Args:
+            text (str): The commit message.
+
+        Returns:
+            bool: True if successful, False otherwise.
+        """
+        text = Halper.capitalize_first_letter(text)
+        try:
+            # Add files then commit
+            subprocess.run(["git", "commit", "-am", text], check=True)
+            return True
+        except subprocess.CalledProcessError as err:
+            print(f"An error occurred: {err}")
             return False
 
     def push():

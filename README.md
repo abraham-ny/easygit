@@ -21,7 +21,7 @@ Python CLI tool that simplifies Git tasks, making it easier to manage your Githu
 1. Clone the repository or download it:
 
    ```shell
-   git clone https://github.com/pycorer/easygit
+   git clone https://github.com/pycorer/easygit.git
    ```
 
 2. Navigate to the project directory:
@@ -35,13 +35,8 @@ Python CLI tool that simplifies Git tasks, making it easier to manage your Githu
    ```shell
    pip install -r requirements.txt
    ```
-4. Update line 98 of `app/explorer.py` with your VSCode path.
 
-   ```python
-   subprocess.Popen(["C:\\Users\\lProfesseur\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe", "."], stdout=devnull, stderr=devnull)
-   ```
-
-5. Build the executable file:
+4. Build the executable file:
 
    ```shell
    pyinstaller --onefile --icon=icon.ico --name=easygit main.py
@@ -71,7 +66,7 @@ If you have an idea for a new feature or want to improve existing ones, check ou
 ## Roadmap
 - [x] Basic Functionalities.
 - [ ] Correct templates adding for ".git" repository URL clone.
-- [ ] Configure virtual environments for VSCode path.
+- [x] Configure virtual environments for VSCode path.
 - [ ] Integrate additional Git commands.
 
 ## Support
