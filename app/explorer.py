@@ -3,6 +3,28 @@ import msvcrt
 import winreg
 
 
+def find_vscode():
+    # Check common install paths to find where vsc is installed
+    possible_paths = [
+        os.path.join(os.getenv('LOCALAPPDATA'), 'Programs', 'Microsoft VS Code', 'Code.exe'),  # User Installer
+        os.path.join(os.getenv('ProgramFiles'), 'Microsoft VS Code', 'Code.exe'),  # System Installer
+        os.path.join(os.getenv('ProgramFiles(x86)'), 'Microsoft VS Code', 'Code.exe'),  # 32-bit System Installer
+    ]
+
+    for path in possible_paths:
+        if os.path.exists(path):
+            return path
+
+    # If not found, check registry
+    try:
+        key = winreg.OpenKey(winreg.HKEY_LOCAL_MACHINE,
+                             r"SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\Code.exe")
+        vscode_path, _ = winreg.QueryValueEx(key, "")
+        return vscode_path
+    except FileNotFoundError:
+        return None
+
+
 class Explorer:
     """
     A class for navigating and interacting with folders in the file system.
@@ -91,7 +113,7 @@ class Explorer:
             if selected_folder is not None:
                 Explorer.change_directory(selected_folder, folders)
 
-    def find_vscode():
+    """def find_vscode():
         # Check common install paths to find where vsc is installed
         possible_paths = [
             os.path.join(os.getenv('LOCALAPPDATA'), 'Programs', 'Microsoft VS Code', 'Code.exe'),  # User Installer
@@ -111,6 +133,7 @@ class Explorer:
             return vscode_path
         except FileNotFoundError:
             return None
+    """
 
     def vscode():
         import subprocess, os
